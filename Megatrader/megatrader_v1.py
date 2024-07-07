@@ -1,5 +1,8 @@
 import itertools
 import sys
+
+
+
 class ObligationPackage:
     def __init__(self,total_days, day, name, price, quantity):
         self.name = name
@@ -10,7 +13,7 @@ class ObligationPackage:
         self.NOMINAL = 1000
         self.BASE_DAY_INCOME = 1
         self.FULL_INCOME_DAY_OFFSET = 30
-        self.ue_price = self. quantity * self.price * self.NOMINAL / 100
+        self.ue_price = int(self. quantity * self.price * self.NOMINAL / 100)
         self.package_income = (
                 self.quantity *
                 (self.total_days - self.purchase_day + self.FULL_INCOME_DAY_OFFSET) * self.BASE_DAY_INCOME
